@@ -23,7 +23,7 @@ export interface FORM {
 
 const TemplateListSection = () => {
     return (
-        <div>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
             {Templates.map((item: TEMPLATE, index: number) => (
                 <TemplateCard {...item} key={index}/>
             ))}

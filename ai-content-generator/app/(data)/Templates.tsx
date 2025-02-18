@@ -115,7 +115,7 @@ export default [
         name: 'Rewrite Article (Plagiarism Free)',
         description: 'Use this tool to rewrite existing articles or blog posts to bypass AI detectors.',
         category: 'Writing',
-        icon: 'https://cdn-icons-png.flaticon.com/128/2199/2199690.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/2992/2992156.png',
         aiPrompt: "Rewrite the given article in a unique, plagiarism-free way while maintaining the meaning.",
         slug: 'rewrite-article',
         form: [
@@ -131,7 +131,7 @@ export default [
         name: 'Text Improver',
         description: 'This handy tool refines your writing, eliminating errors and redundancies.',
         category: 'Writing',
-        icon: 'https://cdn-icons-png.flaticon.com/128/1250/1250697.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/8361/8361342.png',
         aiPrompt: "Improve the readability and clarity of the given text while keeping its original meaning.",
         slug: 'text-improver',
         form: [
