@@ -1,9 +1,34 @@
+import Templates from '@/app/(data)/Templates'
 import React from 'react'
+import TemplateCard from './TemplateCard';
+
+
+export interface TEMPLATE {
+    name: string;
+    description: string;
+    category: string;
+    icon: string;
+    aiPrompt: string;
+    slug: string;
+    form?: FORM[]
+}
+
+export interface FORM {
+    label: string;
+    field: string;
+    name: string;
+    required?: boolean;
+}
+
 
 const TemplateListSection = () => {
-  return (
-    <div>TemplateListSection</div>
-  )
+    return (
+        <div>
+            {Templates.map((item: TEMPLATE, index: number) => (
+                <TemplateCard {...item} key={index}/>
+            ))}
+        </div>
+    )
 }
 
 export default TemplateListSection

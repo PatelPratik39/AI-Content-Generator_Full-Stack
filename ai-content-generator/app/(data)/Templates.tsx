@@ -4,7 +4,7 @@ export default [
         name: 'Blog Title',
         description: 'An AI tool that helps you generate blog titles for your blog posts.',
         category: 'Blog',
-        icon: 'https://cdn-icons-png.flaticon.com/128/6114/6114045.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/4693/4693265.png',
         aiPrompt: "Give Me 6 blog topic ideas in bullet format only based on the given niche & outline topic and return the result in Rich Text Editor format.",
         slug: 'generate-blog-title',
         form: [
@@ -25,7 +25,7 @@ export default [
         name: 'Blog Content',
         description: 'An AI tool that serves as your personal blog post writer, generating engaging content.',
         category: 'Blog',
-        icon: 'https://cdn-icons-png.flaticon.com/128/3048/3048395.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/6114/6114045.png',
         aiPrompt: "Generate a well-structured blog post based on the given topic and key points.",
         slug: 'generate-blog-content',
         form: [
@@ -62,7 +62,7 @@ export default [
         name: 'YouTube SEO Title',
         description: 'An AI tool that generates optimized SEO titles for YouTube videos.',
         category: 'YouTube',
-        icon: 'https://cdn-icons-png.flaticon.com/128/1384/1384060.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/1781/1781812.png',
         aiPrompt: "Generate an engaging and SEO-friendly YouTube video title based on the given topic.",
         slug: 'youtube-seo-title',
         form: [
@@ -78,7 +78,7 @@ export default [
         name: 'YouTube Description',
         description: 'An AI tool that helps create compelling YouTube video descriptions.',
         category: 'YouTube',
-        icon: 'https://cdn-icons-png.flaticon.com/128/1384/1384063.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/15714/15714787.png',
         aiPrompt: "Generate an engaging YouTube video description with relevant keywords.",
         slug: 'youtube-description',
         form: [
@@ -195,7 +195,7 @@ export default [
         name: 'English Grammar Check',
         description: 'AI Model to correct your English grammar by analyzing provided text.',
         category: 'Writing',
-        icon: 'https://cdn-icons-png.flaticon.com/128/902/902292.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/4964/4964022.png',
         aiPrompt: "Check the given text for grammar mistakes and provide the corrected version.",
         slug: 'grammar-check',
         form: [
@@ -211,7 +211,7 @@ export default [
         name: 'Write Code',
         description: 'AI Model to generate programming code in any language.',
         category: 'Code',
-        icon: 'https://cdn-icons-png.flaticon.com/128/6322/6322252.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/10817/10817310.png',
         aiPrompt: "Generate a functional code snippet based on the given programming language and problem statement.",
         slug: 'write-code',
         form: [
@@ -232,7 +232,7 @@ export default [
         name: 'Explain Code',
         description: 'AI Model to explain programming code in any language.',
         category: 'Code',
-        icon: 'https://cdn-icons-png.flaticon.com/128/6190/6190878.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/4260/4260895.png',
         aiPrompt: "Explain the given code snippet in simple terms, breaking down each function and logic step by step.",
         slug: 'explain-code',
         form: [
