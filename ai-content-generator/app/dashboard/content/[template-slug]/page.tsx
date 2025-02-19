@@ -19,7 +19,16 @@ interface PROPS {
 const CreateNewContent = (props: PROPS) => {
     const params = useParams();
     const templateSlug = params['template-slug'] as string | undefined;
-    const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === templateSlug);
+    // const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === templateSlug);
+    const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => {
+        if (item.form) {
+            item.form = item.form.map((field) => ({
+                ...field,
+                field: field.field as "input" | "textarea" | "dropdown" | "checkbox" | "radio",
+            }));
+        }
+        return item.slug === templateSlug;
+    });
     // const selectedTemplate: TEMPLATE | undefined = TemplatesArray.find((item) => item.slug === templateSlug);
 
     // const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === props.params['template-slug'])

@@ -1,4 +1,3 @@
-import { Gurajada } from "next/font/google";
 
 export default [
 
@@ -821,7 +820,14 @@ export default [
         icon: 'https://cdn-icons-png.flaticon.com/128/992/992050.png',
         aiPrompt: "Solve the given math problem and provide step-by-step explanations.",
         slug: 'math-solver',
-        form: [{ label: 'Enter math problem', field: 'textarea', name: 'math_problem', required: true }]
+        form: [
+            {
+                label: 'Enter math problem',
+                field: 'textarea' as "input" | "textarea" | "dropdown" | "checkbox" | "radio",
+                name: 'math_problem',
+                required: true
+            }
+        ]
     },
 
     // ✅ 8. AI-Powered Healthcare & Fitness
