@@ -14,10 +14,13 @@ export interface TEMPLATE {
 }
 
 export interface FORM {
+   
     label: string;
-    field: string;
+    field: 'input' | 'textarea' | 'dropdown' | 'checkbox' | 'radio'; // Define valid field types
     name: string;
     required?: boolean;
+    options?: string[];
+   
 }
 
 
@@ -35,8 +38,8 @@ const TemplateListSection = ({ userSearchInput }: any) => {
     }, [userSearchInput])
 
     return (
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10 h-screen bg-gray-100'>
-            {templateList.map((item: TEMPLATE, index: number) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10 h-screen bg-gray-100">
+            {templateList?.map((item: TEMPLATE, index: number) => (
                 <TemplateCard {...item} key={index} />
             ))}
         </div>

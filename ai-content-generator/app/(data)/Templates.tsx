@@ -684,6 +684,33 @@ export default [
         ]
     },
     {
+        name: 'AI Language Translator',
+        description: 'Translate words and phrases into multiple languages.',
+        category: 'Language & Translation',
+        icon: 'https://cdn-icons-png.flaticon.com/128/2950/2950611.png',
+        aiPrompt: "Translate the given English text into the selected language while maintaining meaning and context.",
+        slug: 'ai-language-translator',
+        form: [
+            {
+                label: 'Enter text to translate',
+                field: 'textarea',
+                name: 'text',
+                required: true
+            },
+            {
+                label: 'Select target language',
+                field: 'dropdown',
+                name: 'language',
+                options: [
+                    'Spanish', 'French', 'German', 'Chinese', 'Japanese',
+                    'Hindi', 'Arabic', 'Portuguese', 'Russian', 'Italian',
+                    'Korean', 'Dutch', 'Turkish', 'Swedish', 'Greek'
+                ],
+                required: true
+            }
+        ]
+    },
+    {
         name: 'Local Restaurant Finder',
         description: 'Discover top-rated restaurants based on cuisine and location.',
         category: 'Food & Travel',
@@ -869,12 +896,89 @@ export default [
     },
     {
         name: 'Song Lyrics & Rap Generator',
-        description: 'Generate custom song lyrics based on themes.',
+        description: 'Generate custom song lyrics in different languages based on themes.',
         category: 'Creative Writing',
         icon: 'https://cdn-icons-png.flaticon.com/128/6135/6135635.png',
-        aiPrompt: "Generate a unique song with lyrics based on the given theme or mood.",
+        aiPrompt: "Generate a unique song with lyrics based on the given theme or mood in the selected language.",
         slug: 'song-lyrics-generator',
-        form: [{ label: 'Enter song theme', field: 'input', name: 'song_theme', required: true },]
+        form: [
+            {
+                label: 'Enter song theme',
+                field: 'input',
+                name: 'song_theme',
+                required: true
+            },
+            {
+                label: 'Select language',
+                field: 'dropdown',
+                name: 'language',
+                options: [
+                    'English', 'Spanish', 'French', 'German', 'Chinese',
+                    'Japanese', 'Hindi', 'Arabic', 'Portuguese', 'Russian',
+                    'Italian', 'Korean', 'Dutch', 'Turkish', 'Swedish', 'Greek'
+                ],
+                required: true
+            }
+        ]
+    },
+
+    {
+        name: 'AI Multilingual Dictionary',
+        description: 'Translate English words or phrases into different languages with definitions and examples.',
+        category: 'Language & Translation',
+        icon: 'https://cdn-icons-png.flaticon.com/128/1973/1973739.png',
+        aiPrompt: "Translate the given English word or phrase into the selected language. Provide meaning, usage examples, and pronunciation where applicable.",
+        slug: 'multilingual-dictionary',
+        form: [
+            {
+                label: 'Enter word or phrase',
+                field: 'input',
+                name: 'word_or_phrase',
+                required: true
+            },
+            {
+                label: 'Select target language',
+                field: 'dropdown',
+                name: 'language',
+                options: [
+                    'Spanish', 'French', 'German', 'Chinese', 'Japanese',
+                    'Hindi', 'Arabic', 'Portuguese', 'Russian', 'Italian',
+                    'Korean', 'Dutch', 'Turkish', 'Swedish', 'Greek'
+                ],
+                required: true
+            }
+        ]
+    },
+    {
+        name: 'AI Quote Generator',
+        description: 'Generate quotes based on various themes, moods, or occasions.',
+        category: 'Creative Writing',
+        icon: 'https://cdn-icons-png.flaticon.com/128/792/792148.png',
+        aiPrompt: "Generate an inspiring quote based on the selected theme or occasion.",
+        slug: 'ai-quote-generator',
+        form: [
+            {
+                label: 'Select quote category',
+                field: 'dropdown',
+                name: 'quote_category',
+                options: [
+                    'Motivational', 'Inspirational', 'Love', 'Friendship', 'Success',
+                    'Happiness', 'Wisdom', 'Funny', 'Birthday', 'Anniversary',
+                    'Life Lessons', 'Spiritual', 'Gratitude', 'Philosophy', 'Leadership'
+                ],
+                required: true
+            },
+            {
+                label: 'Select language',
+                field: 'dropdown',
+                name: 'language',
+                options: [
+                    'English', 'Spanish', 'French', 'German', 'Chinese',
+                    'Japanese', 'Hindi', 'Arabic', 'Portuguese', 'Russian'
+                ],
+                required: true
+            }
+        ]
     },
     // ✅ 7. AI-Powered Learning & Education
     {
