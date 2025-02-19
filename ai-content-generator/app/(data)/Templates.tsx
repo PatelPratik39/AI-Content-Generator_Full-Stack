@@ -191,6 +191,61 @@ export default [
             }
         ]
     },
+    // ✅ 4. AI Code Conversion Tools
+    {
+        name: 'JavaScript to TypeScript Converter',
+        description: 'Convert JavaScript code to TypeScript automatically.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/919/919828.png',
+        aiPrompt: "Convert the following JavaScript code to TypeScript while maintaining functionality and adding type definitions.",
+        slug: 'js-to-ts-converter',
+        form: [{ label: 'Paste JavaScript code', field: 'textarea', name: 'js_code', required: true }]
+    },
+    {
+        name: 'Java to JavaScript Converter',
+        description: 'Convert Java code to JavaScript.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/919/919854.png',
+        aiPrompt: "Convert the given Java code into JavaScript while ensuring equivalent functionality.",
+        slug: 'java-to-js-converter',
+        form: [{ label: 'Paste Java code', field: 'textarea', name: 'java_code', required: true }]
+    },
+    {
+        name: 'Python to Java Converter',
+        description: 'Convert Python code to Java.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/919/919852.png',
+        aiPrompt: "Convert the given Python code into Java while maintaining functionality.",
+        slug: 'python-to-java-converter',
+        form: [{ label: 'Paste Python code', field: 'textarea', name: 'python_code', required: true }]
+    },
+    {
+        name: 'Python to JavaScript Converter',
+        description: 'Convert Python code to JavaScript.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/919/919827.png',
+        aiPrompt: "Convert the given Python code into JavaScript with equivalent logic and execution.",
+        slug: 'python-to-js-converter',
+        form: [{ label: 'Paste Python code', field: 'textarea', name: 'python_code', required: true }]
+    },
+    {
+        name: 'C++ to Python Converter',
+        description: 'Convert C++ code to Python.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/919/919841.png',
+        aiPrompt: "Convert the given C++ code into Python while ensuring functional parity.",
+        slug: 'cpp-to-python-converter',
+        form: [{ label: 'Paste C++ code', field: 'textarea', name: 'cpp_code', required: true }]
+    },
+    {
+        name: 'JavaScript to Python Converter',
+        description: 'Convert JavaScript code to Python.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/919/919827.png',
+        aiPrompt: "Convert the given JavaScript code into Python while preserving logic and behavior.",
+        slug: 'js-to-python-converter',
+        form: [{ label: 'Paste JavaScript code', field: 'textarea', name: 'js_code', required: true }]
+    },
     {
         name: 'English Grammar Check',
         description: 'AI Model to correct your English grammar by analyzing provided text.',
@@ -639,11 +694,225 @@ export default [
             { label: 'Enter location (city or neighborhood)', field: 'input', name: 'location', required: true },
             { label: 'Select cuisine type', field: 'dropdown', name: 'cuisine', options: ['Italian', 'Chinese', 'Indian', 'Japanese', 'Mexican', 'Vegan', 'BBQ', 'Seafood', 'Other'] }
         ]
+    },
+    {
+        name: 'Social Media Engagement Boosters',
+        description: 'AI suggests captions, hashtags, & post ideas.',
+        category: 'Social Media',
+        icon: 'https://cdn-icons-png.flaticon.com/128/1246/1246242.png',
+        aiPrompt: "Generate engaging social media captions, hashtags, and post ideas based on the given topic.",
+        slug: 'social-media-engagement',
+        form: [{ label: 'Enter topic', field: 'input', name: 'social_topic', required: true }]
+    },
+
+    // ✅ 2. AI-Powered Marketing & SEO Content
+    {
+        name: 'SEO-Friendly Blog Post Generator',
+        description: 'Generate keyword-optimized content for blogs.',
+        category: 'Marketing',
+        icon: 'https://cdn-icons-png.flaticon.com/128/3050/3050525.png',
+        aiPrompt: "Generate an SEO-friendly blog post based on the given topic and keywords.",
+        slug: 'seo-blog-post-generator',
+        form: [{ label: 'Enter blog topic', field: 'input', name: 'blog_topic', required: true }]
+    },
+    {
+        name: 'AI-Powered Ad Copy Generator',
+        description: 'Generate high-converting ad copies for online marketing.',
+        category: 'Marketing',
+        icon: 'https://cdn-icons-png.flaticon.com/128/1743/1743224.png',
+        aiPrompt: "Generate a persuasive and engaging ad copy for the given product or service.",
+        slug: 'ad-copy-generator',
+        form: [{ label: 'Enter product/service name', field: 'input', name: 'product_name', required: true }]
+    },
+
+    // ✅ 3. AI-Powered Business & Productivity Tools
+    {
+        name: 'Startup Idea Generator',
+        description: 'Generate unique startup business ideas based on industry trends.',
+        category: 'Business',
+        icon: 'https://cdn-icons-png.flaticon.com/128/565/565310.png',
+        aiPrompt: "Generate an innovative startup idea based on the given industry or problem statement.",
+        slug: 'startup-idea-generator',
+        form: [{ label: 'Enter industry or problem', field: 'input', name: 'industry', required: true }]
+    },
+
+    // ✅ 4. AI Writing & Creative Content Generation
+    {
+        name: 'Screenplay & Script Writing',
+        description: 'Generate movie scripts, play dialogues, and screenplay structures.',
+        category: 'Creative Writing',
+        icon: 'https://cdn-icons-png.flaticon.com/128/12051/12051339.png',
+        aiPrompt: "Generate a creative screenplay or script based on the given theme and characters.",
+        slug: 'screenplay-script-generator',
+        form: [
+            { label: 'Enter theme', field: 'input', name: 'theme', required: true },
+            { label: 'Enter character names', field: 'textarea', name: 'character_names' }
+        ]
+    },
+
+    // ✅ 5. AI Code Generation & Debugging
+    {
+        name: 'AI Code Generator',
+        description: 'Generate functional code snippets for various programming languages.',
+        category: 'Technology',
+        icon: 'https://cdn-icons-png.flaticon.com/128/6520/6520379.png',
+        aiPrompt: "Generate functional and well-structured code snippets for the given programming problem.",
+        slug: 'ai-code-generator',
+        form: [{ label: 'Describe the problem', field: 'textarea', name: 'code_problem', required: true }]
+    },
+
+    // ✅ 6. AI-Powered Travel & Lifestyle Tools
+    {
+        name: 'AI Travel Itinerary Planner',
+        description: 'Create a personalized travel itinerary.',
+        category: 'Travel',
+        icon: 'https://cdn-icons-png.flaticon.com/128/201/201623.png',
+        aiPrompt: "Generate a detailed day-by-day itinerary for the given destination and duration.",
+        slug: 'travel-itinerary-generator',
+        form: [
+            { label: 'Enter destination', field: 'input', name: 'destination', required: true },
+            { label: 'Enter number of days', field: 'input', name: 'days', required: true }
+        ]
+    },
+
+    // ✅ 7. AI-Powered Learning & Education
+    {
+        name: 'AI-Powered Math Solver',
+        description: 'Solve complex math problems step-by-step.',
+        category: 'Education',
+        icon: 'https://cdn-icons-png.flaticon.com/128/992/992050.png',
+        aiPrompt: "Solve the given math problem and provide step-by-step explanations.",
+        slug: 'math-solver',
+        form: [{ label: 'Enter math problem', field: 'textarea', name: 'math_problem', required: true }]
+    },
+
+    // ✅ 8. AI-Powered Healthcare & Fitness
+    {
+        name: 'AI Fitness Diet Food Generator',
+        description: 'Generate personalized diet plans based on fitness goals and dietary preferences.',
+        category: 'Health & Fitness',
+        icon: 'https://cdn-icons-png.flaticon.com/128/4386/4386022.png',
+        aiPrompt: "Generate a custom diet plan based on the selected fitness goal and dietary preference.",
+        slug: 'fitness-diet-food-generator',
+        form: [
+            {
+                label: 'Select fitness goal',
+                field: 'dropdown',
+                name: 'fitness_goal',
+                options: ['Weight Loss', 'Muscle Gain', 'General Fitness'],
+                required: true
+            },
+            {
+                label: 'Select dietary preference',
+                field: 'dropdown',
+                name: 'dietary_preference',
+                options: ['Vegetarian', 'Non-Vegetarian', 'Vegan'],
+                required: true
+            }
+        ]
+    },
+
+
+    // ✅ 9. AI-Powered E-Commerce & Shopping
+    // {
+    //     name: 'AI Product Description Generator',
+    //     description: 'Generate compelling product descriptions.',
+    //     category: 'E-Commerce',
+    //     icon: 'https://cdn-icons-png.flaticon.com/128/2331/2331779.png',
+    //     aiPrompt: "Generate an engaging and SEO-optimized product description based on the given product details.",
+    //     slug: 'product-description-generator',
+    //     form: [{ label: 'Enter product name', field: 'input', name: 'product_name', required: true }]
+    // },
+    {
+        name: 'Social Media Poll & Quiz Generator',
+        description: 'Create interactive polls & quizzes for engagement.',
+        category: 'Social Media',
+        icon: 'https://cdn-icons-png.flaticon.com/128/1246/1246242.png',
+        aiPrompt: "Generate an interactive social media poll or quiz based on the given topic.",
+        slug: 'social-media-quiz-generator',
+        form: [{ label: 'Enter topic', field: 'input', name: 'poll_topic', required: true }]
+    },
+    // {
+    //     name: 'Personalized Blogging',
+    //     description: 'Generate AI-powered blog posts, summaries, and outlines.',
+    //     category: 'Blog',
+    //     icon: 'https://cdn-icons-png.flaticon.com/128/2331/2331779.png',
+    //     aiPrompt: "Generate a well-structured blog post based on the given topic and key points.",
+    //     slug: 'personalized-blogging',
+    //     form: [
+    //         { label: 'Enter blog topic', field: 'input', name: 'blog_topic', required: true },
+    //         { label: 'Enter key points', field: 'textarea', name: 'key_points' }
+    //     ]
+    // },
+    {
+        name: 'Affiliate Marketing Content Generator',
+        description: 'Generate product descriptions & review articles.',
+        category: 'Marketing',
+        icon: 'https://cdn-icons-png.flaticon.com/128/8644/8644505.png',
+        aiPrompt: "Generate an engaging affiliate product review based on the given product details.",
+        slug: 'affiliate-marketing-generator',
+        form: [{ label: 'Enter product name', field: 'input', name: 'product_name', required: true }]
+    },
+
+    // ✅ 3. AI-Powered Business & Productivity Tools
+    {
+        name: 'AI Cover Letter Generator',
+        description: 'Generates job-specific cover letters.',
+        category: 'Career',
+        icon: 'https://cdn-icons-png.flaticon.com/128/888/888879.png',
+        aiPrompt: "Generate a professional and concise resume summary based on the provided  jo description and experience and skills.",
+        slug: 'cover-letter-generator',
+        form: [
+            { label: 'Enter years of experience', field: 'input', name: 'years_experience', required: true },
+            { label: 'List key skills', field: 'textarea', name: 'key_skills' }
+        ]
+    },
+    {
+        name: 'Song Lyrics & Rap Generator',
+        description: 'Generate custom song lyrics based on themes.',
+        category: 'Creative Writing',
+        icon: 'https://cdn-icons-png.flaticon.com/128/6135/6135635.png',
+        aiPrompt: "Generate a unique song with lyrics based on the given theme or mood.",
+        slug: 'song-lyrics-generator',
+        form: [{ label: 'Enter song theme', field: 'input', name: 'song_theme', required: true },]
+    },
+    // ✅ 7. AI-Powered Learning & Education
+    {
+        name: 'AI-Powered Math Solver',
+        description: 'Solve complex math problems step-by-step.',
+        category: 'Education',
+        icon: 'https://cdn-icons-png.flaticon.com/128/992/992050.png',
+        aiPrompt: "Solve the given math problem and provide step-by-step explanations.",
+        slug: 'math-solver',
+        form: [{ label: 'Enter math problem', field: 'textarea', name: 'math_problem', required: true }]
+    },
+
+    // ✅ 8. AI-Powered Healthcare & Fitness
+    {
+        name: 'AI Fitness Routine Generator',
+        description: 'Generate custom workout plans.',
+        category: 'Health & Fitness',
+        icon: 'https://cdn-icons-png.flaticon.com/128/17774/17774325.png',
+        aiPrompt: "Create a workout routine based on fitness goals and experience level.",
+        slug: 'fitness-routine-generator',
+        form: [
+            { label: 'Select fitness goal', field: 'dropdown', name: 'fitness_goal', options: ['Weight Loss', 'Muscle Gain', 'General Fitness'] }
+        ]
+    },
+
+    // ✅ 10. AI-Generated Legal & Compliance Content
+    {
+        name: 'AI-Powered Contract Generator',
+        description: 'Generate legal contract templates.',
+        category: 'Legal',
+        icon: 'https://cdn-icons-png.flaticon.com/128/427/427703.png',
+        aiPrompt: "Generate a contract template based on the given legal context.",
+        slug: 'contract-generator',
+        form: [
+            { label: 'Enter contract type', field: 'input', name: 'contract_type', required: true },
+            { label: 'Enter key terms', field: 'textarea', name: 'key_terms' }
+        ]
     }
-
-
-
-
 
 ];
 
