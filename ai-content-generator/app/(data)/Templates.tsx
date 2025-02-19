@@ -150,7 +150,7 @@ export default [
         description: 'An AI tool that adds relevant emojis to text to enhance engagement.',
         category: 'Social Media',
         icon: 'https://cdn-icons-png.flaticon.com/128/4160/4160766.png',
-        aiPrompt: "Add emojis to the given text where appropriate to enhance its meaning and engagement.",
+        aiPrompt: "Add relevant emojis to the given text where appropriate to enhance its meaning and engagement.",
         slug: 'add-emojis',
         form: [
             {
@@ -211,6 +211,15 @@ export default [
         aiPrompt: "Convert the given Java code into JavaScript while ensuring equivalent functionality.",
         slug: 'java-to-js-converter',
         form: [{ label: 'Paste Java code', field: 'textarea', name: 'java_code', required: true }]
+    },
+    {
+        name: ' JavaScript to Java  Converter',
+        description: 'Convert Javascript code to Java.',
+        category: 'Code Conversion',
+        icon: 'https://cdn-icons-png.flaticon.com/128/3344/3344322.png',
+        aiPrompt: "Convert the given JavaScript code into Java while ensuring equivalent functionality.",
+        slug: 'js-to-java-converter',
+        form: [{ label: 'Paste JavaScript code', field: 'textarea', name: 'javascript_code', required: true }]
     },
     {
         name: 'Python to Java Converter',
@@ -759,7 +768,7 @@ export default [
         name: 'Startup Idea Generator',
         description: 'Generate unique startup business ideas based on industry trends.',
         category: 'Business',
-        icon: 'https://cdn-icons-png.flaticon.com/128/565/565310.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/5064/5064971.png',
         aiPrompt: "Generate an innovative startup idea based on the given industry or problem statement.",
         slug: 'startup-idea-generator',
         form: [{ label: 'Enter industry or problem', field: 'input', name: 'industry', required: true }]
@@ -901,7 +910,7 @@ export default [
         description: 'Generate custom song lyrics in different languages based on themes.',
         category: 'Creative Writing',
         icon: 'https://cdn-icons-png.flaticon.com/128/6135/6135635.png',
-        aiPrompt: "Generate a unique song with lyrics based on the given theme or mood in the selected language.",
+        aiPrompt: "Generate a unique entire song with lyrics based on the given theme or mood in the selected language.",
         slug: 'song-lyrics-generator',
         form: [
             {
@@ -975,7 +984,7 @@ export default [
                 field: 'dropdown',
                 name: 'language',
                 options: [
-                    'English', 'Spanish', 'French', 'German', 'Chinese',
+                    'English', 'Spanish','Gujarati', 'French', 'German', 'Chinese',
                     'Japanese', 'Hindi', 'Arabic', 'Portuguese', 'Russian'
                 ],
                 required: true
