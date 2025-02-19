@@ -369,7 +369,7 @@ export default [
         name: 'Twitter Thread Generator',
         description: 'Generate engaging Twitter threads to boost engagement.',
         category: 'Social Media',
-        icon: 'https://cdn-icons-png.flaticon.com/128/733/733579.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968830.png',
         aiPrompt: "Generate an engaging Twitter thread based on the given topic.",
         slug: 'twitter-thread-generator',
         form: [
@@ -661,7 +661,7 @@ export default [
         name: 'Travel Itinerary Generator',
         description: 'Generate a customized travel itinerary based on your destination, duration, and interests.',
         category: 'Travel',
-        icon: 'https://cdn-icons-png.flaticon.com/128/201/201623.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/2248/2248315.png',
         aiPrompt: "Generate a day-by-day travel itinerary for the given destination, including must-visit places, activities, and local experiences based on the user's preferences.",
         slug: 'travel-itinerary-generator',
         form: [
@@ -674,7 +674,7 @@ export default [
         name: 'Travel Budget Planner',
         description: 'Plan your travel expenses by generating a detailed budget based on your trip details.',
         category: 'Travel',
-        icon: 'https://cdn-icons-png.flaticon.com/128/2082/2082860.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/13972/13972376.png',
         aiPrompt: "Generate a detailed budget breakdown for the given destination, including accommodation, food, transportation, activities, and miscellaneous expenses based on the provided budget range.",
         slug: 'travel-budget-planner',
         form: [
@@ -762,18 +762,18 @@ export default [
     },
 
     // ✅ 6. AI-Powered Travel & Lifestyle Tools
-    {
-        name: 'AI Travel Itinerary Planner',
-        description: 'Create a personalized travel itinerary.',
-        category: 'Travel',
-        icon: 'https://cdn-icons-png.flaticon.com/128/201/201623.png',
-        aiPrompt: "Generate a detailed day-by-day itinerary for the given destination and duration.",
-        slug: 'travel-itinerary-generator',
-        form: [
-            { label: 'Enter destination', field: 'input', name: 'destination', required: true },
-            { label: 'Enter number of days', field: 'input', name: 'days', required: true }
-        ]
-    },
+    // {
+    //     name: 'AI Travel Itinerary Planner',
+    //     description: 'Create a personalized travel itinerary.',
+    //     category: 'Travel',
+    //     icon: 'https://cdn-icons-png.flaticon.com/128/2248/2248315.png',
+    //     aiPrompt: "Generate a detailed day-by-day itinerary for the given destination and duration.",
+    //     slug: 'travel-itinerary-generator',
+    //     form: [
+    //         { label: 'Enter destination', field: 'input', name: 'destination', required: true },
+    //         { label: 'Enter number of days', field: 'input', name: 'days', required: true }
+    //     ]
+    // },
 
     // ✅ 7. AI-Powered Learning & Education
     {
@@ -859,7 +859,7 @@ export default [
         name: 'AI Cover Letter Generator',
         description: 'Generates job-specific cover letters.',
         category: 'Career',
-        icon: 'https://cdn-icons-png.flaticon.com/128/888/888879.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/6186/6186195.png',
         aiPrompt: "Generate a professional and concise cover letter based on the provided job description and experience and skills.",
         slug: 'cover-letter-generator',
         form: [
@@ -881,7 +881,7 @@ export default [
         name: 'AI-Powered Math Solver',
         description: 'Solve complex math problems step-by-step.',
         category: 'Education',
-        icon: 'https://cdn-icons-png.flaticon.com/128/992/992050.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/8419/8419106.png',
         aiPrompt: "Solve the given math problem and provide step-by-step explanations.",
         slug: 'math-solver',
         form: [{ label: 'Enter math problem', field: 'textarea', name: 'math_problem', required: true }]
