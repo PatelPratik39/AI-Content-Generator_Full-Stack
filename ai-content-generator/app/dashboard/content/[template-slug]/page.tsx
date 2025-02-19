@@ -9,6 +9,10 @@ import { Button } from '@/components/ui/button'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { chatSession } from '@/utils/AiModel'
+import { AIOutput } from '@/utils/schema'
+import { db } from '@/utils/db'
+import { useUser } from '@clerk/nextjs'
+import moment from 'moment';
 
 interface PROPS {
     params: {
@@ -18,6 +22,8 @@ interface PROPS {
 
 const CreateNewContent = (props: PROPS) => {
     const params = useParams();
+    const {user} = useUser();
+
     const templateSlug = params['template-slug'] as string | undefined;
     // const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === templateSlug);
     const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => {
@@ -47,8 +53,63 @@ const CreateNewContent = (props: PROPS) => {
         const result = await chatSession.sendMessage(finalAIPrompt);
         console.log(result.response.text());
         setAiOutput(result.response.text());
+        await saveToDb(formData,selectedTemplate?.slug, result?.response.text());
         setLoading(false);
     }
+
+    // Save contents to the database - Drizzle Database
+    // Save contents to the database - Drizzle Database
+
+    const saveToDb = async (formData: any, templateSlug: any, aiResponse?: string) => {
+        const createdBy = user?.primaryEmailAddress?.emailAddress || 'Unknown User';
+        console.log('createdBy:', createdBy); // add this line
+
+        if (!createdBy) {
+            console.error('User email address is not available');
+            return; // or throw an error, depending on your requirements
+        }
+
+        console.log('inserting data:', {
+            formData: JSON.stringify(formData),
+            templateSlug,
+            aiResponse,
+            createdBy,
+            createdAt: moment().format('DD/MM/YYYY HH:mm:ss')
+        }); // add this line
+
+        try {
+            // @ts-ignore
+            const result = await db.insert(AIOutput).values({
+                FormData: formData,
+                templateSlug,
+                aiResponse,
+                createdBy,
+                createdAt: moment().format('YYYY-MM-DD HH:mm:ss'),
+                ignoreNulls: true
+            });
+            console.log('insert result:', result); // add this line
+        } catch (error) {
+            console.error('insert error:', error); // add this line
+        }
+    }
+   
+    // const saveToDb = async (formData: any, templateSlug: any, aiResponse?: string) => {
+    //     const createdBy = user?.primaryEmailAddress?.emailAddress;
+    //     if (!createdBy) {
+    //         console.error('User email address is not available');
+    //         return; // or throw an error, depending on your requirements
+    //     }
+    //     const result = await db.insert(AIOutput).values({
+    //         // @ts-ignore
+    //         FormData: formData,
+    //         templateSlug: templateSlug,
+    //         aiResponse: aiResponse,
+    //         createdBy: createdBy,
+    //         createdAt: moment().format('YYYY-MM-DD HH:mm:ss')
+    //     })
+    //     console.log(result);
+        
+    // }
 
     return (
         <>

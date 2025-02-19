@@ -180,7 +180,7 @@ export default [
         name: 'Instagram Hashtag Generator',
         description: 'An AI tool that generates trending hashtags for Instagram posts.',
         category: 'Social Media',
-        icon: 'https://cdn-icons-png.flaticon.com/128/5380/5380100.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/8135/8135696.png',
         aiPrompt: "Generate the most relevant and trending hashtags for an Instagram post.",
         slug: 'instagram-hashtags',
         form: [

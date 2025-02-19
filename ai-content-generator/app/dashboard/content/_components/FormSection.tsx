@@ -15,6 +15,7 @@ interface PROPS {
 
 const FormSection = ({ selectedTemplate, userFormInput, loading }: PROPS) => {
     const [formData, setFormData] = useState<{ [key: string]: any }>({});
+    
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target;
