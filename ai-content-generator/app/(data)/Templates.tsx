@@ -205,7 +205,7 @@ export default [
         name: 'Java to JavaScript Converter',
         description: 'Convert Java code to JavaScript.',
         category: 'Code Conversion',
-        icon: 'https://cdn-icons-png.flaticon.com/128/919/919854.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/15664/15664472.png',
         aiPrompt: "Convert the given Java code into JavaScript while ensuring equivalent functionality.",
         slug: 'java-to-js-converter',
         form: [{ label: 'Paste Java code', field: 'textarea', name: 'java_code', required: true }]
@@ -214,7 +214,7 @@ export default [
         name: 'Python to Java Converter',
         description: 'Convert Python code to Java.',
         category: 'Code Conversion',
-        icon: 'https://cdn-icons-png.flaticon.com/128/919/919852.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/226/226777.png',
         aiPrompt: "Convert the given Python code into Java while maintaining functionality.",
         slug: 'python-to-java-converter',
         form: [{ label: 'Paste Python code', field: 'textarea', name: 'python_code', required: true }]
@@ -229,13 +229,13 @@ export default [
         form: [{ label: 'Paste Python code', field: 'textarea', name: 'python_code', required: true }]
     },
     {
-        name: 'C++ to Python Converter',
-        description: 'Convert C++ code to Python.',
+        name: 'Java to Python Converter',
+        description: 'Convert Java code to Python.',
         category: 'Code Conversion',
-        icon: 'https://cdn-icons-png.flaticon.com/128/919/919841.png',
-        aiPrompt: "Convert the given C++ code into Python while ensuring functional parity.",
+        icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968350.png',
+        aiPrompt: "Convert the given Java code into Python while ensuring functional parity.",
         slug: 'cpp-to-python-converter',
-        form: [{ label: 'Paste C++ code', field: 'textarea', name: 'cpp_code', required: true }]
+        form: [{ label: 'Paste Java code', field: 'textarea', name: 'cpp_code', required: true }]
     },
     {
         name: 'JavaScript to Python Converter',
@@ -346,7 +346,7 @@ export default [
         name: 'Facebook Ad Copy',
         description: 'Generate compelling ad copies for Facebook marketing campaigns.',
         category: 'Advertising',
-        icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968764.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/9640/9640088.png',
         aiPrompt: "Generate a high-converting Facebook ad copy based on the given product or service.",
         slug: 'facebook-ad-copy',
         form: [
@@ -387,8 +387,8 @@ export default [
         name: 'Resume Summary Generator',
         description: 'Generate a professional resume summary based on experience and skills.',
         category: 'Career',
-        icon: 'https://cdn-icons-png.flaticon.com/128/888/888879.png',
-        aiPrompt: "Generate a professional and concise resume summary based on the provided experience and skills.",
+        icon: 'https://cdn-icons-png.flaticon.com/128/5403/5403762.png',
+        aiPrompt: "Generate a professional and concise resume summary based on the provided Job Descriptio , real work experience and skills.",
         slug: 'resume-summary',
         form: [
             {
@@ -410,7 +410,7 @@ export default [
         name: 'Product Description Generator',
         description: 'Generate compelling product descriptions for eCommerce listings.',
         category: 'E-Commerce',
-        icon: 'https://cdn-icons-png.flaticon.com/128/2331/2331779.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/12463/12463174.png',
         aiPrompt: "Generate an engaging and SEO-optimized product description based on the given product details.",
         slug: 'product-description',
         form: [
@@ -755,7 +755,7 @@ export default [
         name: 'AI Code Generator',
         description: 'Generate functional code snippets for various programming languages.',
         category: 'Technology',
-        icon: 'https://cdn-icons-png.flaticon.com/128/6520/6520379.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/2586/2586671.png',
         aiPrompt: "Generate functional and well-structured code snippets for the given programming problem.",
         slug: 'ai-code-generator',
         form: [{ label: 'Describe the problem', field: 'textarea', name: 'code_problem', required: true }]
@@ -860,7 +860,7 @@ export default [
         description: 'Generates job-specific cover letters.',
         category: 'Career',
         icon: 'https://cdn-icons-png.flaticon.com/128/888/888879.png',
-        aiPrompt: "Generate a professional and concise resume summary based on the provided  jo description and experience and skills.",
+        aiPrompt: "Generate a professional and concise cover letter based on the provided job description and experience and skills.",
         slug: 'cover-letter-generator',
         form: [
             { label: 'Enter years of experience', field: 'input', name: 'years_experience', required: true },
