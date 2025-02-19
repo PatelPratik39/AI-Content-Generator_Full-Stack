@@ -1,3 +1,5 @@
+import { Gurajada } from "next/font/google";
+
 export default [
 
     {
@@ -223,7 +225,7 @@ export default [
         name: 'Python to JavaScript Converter',
         description: 'Convert Python code to JavaScript.',
         category: 'Code Conversion',
-        icon: 'https://cdn-icons-png.flaticon.com/128/919/919827.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/3344/3344325.png',
         aiPrompt: "Convert the given Python code into JavaScript with equivalent logic and execution.",
         slug: 'python-to-js-converter',
         form: [{ label: 'Paste Python code', field: 'textarea', name: 'python_code', required: true }]
@@ -241,7 +243,7 @@ export default [
         name: 'JavaScript to Python Converter',
         description: 'Convert JavaScript code to Python.',
         category: 'Code Conversion',
-        icon: 'https://cdn-icons-png.flaticon.com/128/919/919827.png',
+        icon: 'https://cdn-icons-png.flaticon.com/128/8422/8422225.png',
         aiPrompt: "Convert the given JavaScript code into Python while preserving logic and behavior.",
         slug: 'js-to-python-converter',
         form: [{ label: 'Paste JavaScript code', field: 'textarea', name: 'js_code', required: true }]
@@ -941,7 +943,7 @@ export default [
                 field: 'dropdown',
                 name: 'language',
                 options: [
-                    'Spanish', 'French', 'German', 'Chinese', 'Japanese',
+                    'Spanish', 'French', 'German', 'Chinese', 'Gujarati','Japanese',
                     'Hindi', 'Arabic', 'Portuguese', 'Russian', 'Italian',
                     'Korean', 'Dutch', 'Turkish', 'Swedish', 'Greek'
                 ],

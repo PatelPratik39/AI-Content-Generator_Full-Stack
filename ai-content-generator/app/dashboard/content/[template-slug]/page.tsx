@@ -18,12 +18,14 @@ interface PROPS {
 
 const CreateNewContent = (props: PROPS) => {
     const params = useParams();
-    const templateSlug = params['template-slug'] as string;
+    const templateSlug = params['template-slug'] as string | undefined;
     const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === templateSlug);
     // const selectedTemplate: TEMPLATE | undefined = TemplatesArray.find((item) => item.slug === templateSlug);
 
     // const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === props.params['template-slug'])
     const [loading, setLoading] = useState(false);
+
+    const [aiOutput, setAiOutput] = useState<string>('');   
 
     const generateAIContent = async (formData: any) => {
 
@@ -35,7 +37,7 @@ const CreateNewContent = (props: PROPS) => {
 
         const result = await chatSession.sendMessage(finalAIPrompt);
         console.log(result.response.text());
-
+        setAiOutput(result.response.text());
         setLoading(false);
     }
 
@@ -50,7 +52,7 @@ const CreateNewContent = (props: PROPS) => {
 
                     {/* Output Section */}
                     <div className='md:col-span-2'>
-                        <OutputSection />
+                        <OutputSection aiOutput={aiOutput} />
                     </div>
                 </div>
             </div>
