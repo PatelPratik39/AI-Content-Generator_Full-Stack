@@ -1,3 +1,4 @@
+
 import { db } from '@/utils/db'
 import { currentUser } from '@clerk/nextjs/server'
 import React from 'react'
@@ -8,6 +9,7 @@ import Templates from '@/app/(data)/Templates'
 import Image from 'next/image'
 import { desc } from 'drizzle-orm'
 import { eq } from 'drizzle-orm';
+import { Button } from '@/components/ui/button'
 
 export interface HISTORY {
     id: number,
@@ -23,8 +25,7 @@ async function History ()  {
 
     // @ts-ignore
     const HistoryList: HISTORY[] = await db.select().from(AIOutput).where(eq(AIOutput?.createdBy, user?.primaryEmailAddress?.emailAddress))
-        .orderBy(desc(AIOutput.id))
-        ;
+        .orderBy(desc(AIOutput.id));
     
 
     const GetTemplateName = (slug: string) => {
@@ -44,22 +45,20 @@ async function History ()  {
                 <h2>WORDS</h2>
                 <h2>COPY</h2>
             </div>
+            <hr />
             {HistoryList.map((item: HISTORY, index: number) => (
-                <>
-                    <div key={item.id} className='grid grid-cols-7 my-5 py-3 px-3'>
-                        <h2 className='col-span-2 flex gap-2 items-center'>
-                            <Image src={GetTemplateName(item?.templateSlug)?.icon} width={25} height={25} alt='icon' />
-                            {GetTemplateName(item.templateSlug)?.name}
-                        </h2>
-                        <h2 className='col-span-2 line-clamp-3 mr-3'>{item?.aiResponse}</h2>
-                        <h2>{item.createdAt}</h2>
-                        <h2>{item?.aiResponse.length}</h2>
-                        <h2>
-                            <CopyButton aiResponse={item.aiResponse} />
-                        </h2>
-                    </div>
-                    <hr />
-                </>
+                <div key={item.id} className='grid grid-cols-7 my-5 py-3 px-3'>
+                    <h2 className='col-span-2 flex gap-2 items-center'>
+                        <Image src={GetTemplateName(item?.templateSlug)?.icon} width={25} height={25} alt='icon' />
+                        {GetTemplateName(item.templateSlug)?.name}
+                    </h2>
+                    <h2 className='col-span-2 line-clamp-3 mr-3'>{item?.aiResponse}</h2>
+                    <h2>{item.createdAt}</h2>
+                    <h2>{item?.aiResponse.length}</h2>
+                    <h2>
+                        <CopyButton aiResponse={item.aiResponse} />
+                    </h2>
+                </div>
             ))}
         </div>
     )

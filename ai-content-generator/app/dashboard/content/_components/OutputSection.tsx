@@ -26,7 +26,7 @@ const OutputSection = ({ aiOutput }: props) => {
     const editorReference = editorRef.current.getInstance();
     editorReference.setMarkdown(aiOutput);
     editorReference.changeMode('wysiwyg');
- 
+
   }, [aiOutput])
 
   return (
@@ -34,7 +34,7 @@ const OutputSection = ({ aiOutput }: props) => {
       <div className='bg-white border shadow-lg rounded-lg'>
         <div className='flex justify-between items-center p-5 '>
           <h2 className='font-medium text-lg'>Your Result</h2>
-          <Button className='flex items-center gap-2'><Copy className='w-4 h-4' />Copy</Button>
+          <Button className='flex items-center gap-2' onClick={() => navigator.clipboard.writeText(aiOutput)}><Copy className='w-4 h-4' />Copy</Button>
         </div>
         <Editor
           ref={editorRef}
@@ -43,9 +43,9 @@ const OutputSection = ({ aiOutput }: props) => {
           height="600px"
           initialEditType="WYSIWYG"
           useCommandShortcut={true}
-          // onChange={() => {
-          //   console.log(editorRef.current.getInstance().getMarkdown());
-          // }}
+        // onChange={() => {
+        //   console.log(editorRef.current.getInstance().getMarkdown());
+        // }}
         />
       </div>
     </>
