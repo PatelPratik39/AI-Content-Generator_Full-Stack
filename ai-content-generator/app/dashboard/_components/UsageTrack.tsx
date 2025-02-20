@@ -3,11 +3,11 @@ import { Button } from '@/components/ui/button'
 import { db } from '@/utils/db';
 import { AIOutput } from '@/utils/schema';
 import { useUser } from '@clerk/nextjs';
-// import { currentUser } from '@clerk/nextjs/server';
+import { currentUser } from '@clerk/nextjs/server';
 import React, { useContext, useEffect, useState } from 'react'
-import { HISTORY } from '../history/Page';
+import { HISTORY } from '../history/page';
 import { TotalUsageContext } from '@/app/(contex)/TotalUsageContext';
-// import { eq } from '@prisma/client';
+import { eq } from 'drizzle-orm';
 
 const UsageTrack = () => {
     const { user } = useUser();
@@ -38,7 +38,7 @@ const UsageTrack = () => {
             <div className='bg-primary text-white p-3 rounded-lg'>
                 <h2 className='font-medium'>Credits</h2>
                 <div className='h-2 bg-[#9981f9] w-full rounded-full mt-3'>
-                    <div className='h-2 bg-white rounded-full' style={{ width: (totalUsage/10000)*100 + "%"}}>
+                    <div className={`h-2 rounded-full ${totalUsage > 10000 ? 'bg-red-500' : 'bg-white'}`} style={{ width: Math.min((totalUsage / 10000) * 100, 100) + "%" }}>
                     </div>
                 </div>
                 <h2 className='text-sm my-2'>{totalUsage}/10,000 credit used</h2>

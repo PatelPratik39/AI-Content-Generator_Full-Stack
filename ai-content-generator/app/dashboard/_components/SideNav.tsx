@@ -47,7 +47,7 @@ function SideNav() {
             <hr className='my-6 border' />
             <div className='mt-3'>
                 {MenuList.map((menu, index) => (
-                    <Link href={menu.path}>
+                    <Link href={menu.path} key={menu.path}>
                         <div className={`flex gap-2 mb-2 p-3
               hover:bg-primary hover:text-white rounded-lg
               cursor-pointer items-center

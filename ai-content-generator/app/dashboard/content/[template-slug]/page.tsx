@@ -1,6 +1,6 @@
 'use client'
-import React, { useState } from 'react'
-import { useParams } from 'next/navigation'
+import React, { useContext, useState } from 'react'
+import { useParams, useRouter } from 'next/navigation'
 import FormSection from '../_components/FormSection'
 import OutputSection from '../_components/OutputSection'
 import Templates from '@/app/(data)/Templates'
@@ -13,6 +13,7 @@ import { AIOutput } from '@/utils/schema'
 import { db } from '@/utils/db'
 import { useUser } from '@clerk/nextjs'
 import moment from 'moment';
+import { TotalUsageContext } from '@/app/(contex)/TotalUsageContext'
 
 interface PROPS {
     params: {
@@ -23,6 +24,8 @@ interface PROPS {
 const CreateNewContent = (props: PROPS) => {
     const params = useParams();
     const {user} = useUser();
+    const router = useRouter();
+    const{totalUsage, setTotalUsage} = useContext(TotalUsageContext);
 
     const templateSlug = params['template-slug'] as string | undefined;
     // const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === templateSlug);
@@ -45,6 +48,13 @@ const CreateNewContent = (props: PROPS) => {
     const generateAIContent = async (formData: any) => {
 
         console.log('Generate AI Content');
+        if(totalUsage >= 10000){
+            console.log("Please Upgrade your plan");
+            
+            alert('You have reached your credit limit');
+            router.push('/dashboard/billing');
+            return
+        }
         setLoading(true);
         const selectedPrompt = selectedTemplate?.aiPrompt;
         const finalAIPrompt = JSON.stringify(formData) + ", " + selectedPrompt;

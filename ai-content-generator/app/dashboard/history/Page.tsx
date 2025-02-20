@@ -6,7 +6,8 @@ import { AIOutput } from '@/utils/schema'
 import { TEMPLATE } from '../_components/TemplateListSection'
 import Templates from '@/app/(data)/Templates'
 import Image from 'next/image'
-import { desc, eq } from 'drizzle-orm'
+import { desc } from 'drizzle-orm'
+import { eq } from 'drizzle-orm';
 
 export interface HISTORY {
     id: number,
@@ -38,14 +39,14 @@ async function History ()  {
             <p className='text-gray-500'>Search your previously generate AI content</p>
             <div className='grid grid-cols-7 font-bold bg-secondary mt-5 py-3 px-3'>
                 <h2 className='col-span-2'>TEMPLATE</h2>
-                <h2 className='col-span-2'>AI Rrsponse</h2>
+                <h2 className='col-span-2'>AI RESPONSE</h2>
                 <h2>DATE</h2>
                 <h2>WORDS</h2>
                 <h2>COPY</h2>
             </div>
             {HistoryList.map((item: HISTORY, index: number) => (
                 <>
-                    <div className='grid grid-cols-7 my-5 py-3 px-3'>
+                    <div key={item.id} className='grid grid-cols-7 my-5 py-3 px-3'>
                         <h2 className='col-span-2 flex gap-2 items-center'>
                             <Image src={GetTemplateName(item?.templateSlug)?.icon} width={25} height={25} alt='icon' />
                             {GetTemplateName(item.templateSlug)?.name}
