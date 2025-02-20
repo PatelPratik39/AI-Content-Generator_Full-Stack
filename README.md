@@ -23,6 +23,63 @@ The **AI Content Generator** is a full-stack web application designed to assist 
 - **Authentication**: Clerk for user management
 - **AI Integration**: OpenAI's GPT models
 
+### **Screenshots**
+Below are some screenshots demonstrating the application’s features.
+
+#### **Blog Content Generator**
+![Blog Contents](./screenshots/BlogContents.png)
+
+#### **Game Character Generator**
+![Game Character](./screenshots/gamecharacter.png)
+
+#### **Instagram Hashtag Generator**
+![Instagram Hashtag](./screenshots/InstaHashtag.png)
+
+#### **Instagram Post Generator**
+![Instagram Post Generator](./screenshots/instPostGeneratorpng.png)
+
+#### **JavaScript to Java Converter**
+![JavaScript to Java](./screenshots/JavascriptJava.png)
+
+#### **JavaScript to Python Converter**
+![JavaScript to Python](./screenshots/JavaScriptPython.png)
+
+#### **Medium Blog Post Generator**
+![Medium Blog Post](./screenshots/medium.png)
+
+#### **Python to JavaScript Converter**
+![Python to JavaScript](./screenshots/pythonJavaScript.png)
+
+#### **Quote Generator (English)**
+![Quote Generator English](./screenshots/quoteEnglish.png)
+
+#### **Quote Generator (Gujarati)**
+![Quote Generator Gujarati](./screenshots/quoteGujarati.png)
+
+#### **Quote Generator (Hindi)**
+![Quote Generator Hindi](./screenshots/quoteHindi.png)
+
+#### **Recipe Generator**
+![Recipe Generator](./screenshots/recipeGenerator.png)
+
+#### **Restaurant Finder**
+![Restaurant Finder](./screenshots/restaurantFinder.png)
+
+#### **Startup Business Idea Generator**
+![Startup Business Idea](./screenshots/startupBusinessIdea.png)
+
+#### **Text Improver**
+![Text Improver](./screenshots/TextImprover.png)
+
+#### **Token Usage Bar**
+![Token Usage Bar](./screenshots/tokenUsageBar.png)
+
+#### **Travel Itinerary Generator**
+![Travel Itinerary](./screenshots/Travelltenary.png)
+
+#### **Travel Feature**
+![Travel](./screenshots/travel.png)
+
 ## Getting Started
 
 ### Prerequisites
