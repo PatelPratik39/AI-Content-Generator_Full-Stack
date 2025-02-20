@@ -50,6 +50,7 @@ const SideNav = () => {
                     </div>
                 ))}
             </div>
+            
         </div>
     )
 }
