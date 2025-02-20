@@ -26,6 +26,7 @@ const CreateNewContent = (props: PROPS) => {
     const {user} = useUser();
     const router = useRouter();
     const{totalUsage, setTotalUsage} = useContext(TotalUsageContext);
+    const { UpdateCreditUsageContext, setUpdateCreditUsageContext } = useContext(TotalUsageContext);
 
     const templateSlug = params['template-slug'] as string | undefined;
     // const selectedTemplate: TEMPLATE | undefined = Templates?.find((item) => item.slug === templateSlug);
@@ -65,6 +66,7 @@ const CreateNewContent = (props: PROPS) => {
         setAiOutput(result.response.text());
         await saveToDb(formData,selectedTemplate?.slug, result?.response.text());
         setLoading(false);
+        setUpdateCreditUsageContext(Date.now());
     }
 
     // Save contents to the database - Drizzle Database

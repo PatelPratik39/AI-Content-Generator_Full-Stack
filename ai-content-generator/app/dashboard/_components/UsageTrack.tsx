@@ -4,7 +4,7 @@ import { db } from '@/utils/db';
 import { AIOutput } from '@/utils/schema';
 import { useUser } from '@clerk/nextjs';
 import { currentUser } from '@clerk/nextjs/server';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { use, useContext, useEffect, useState } from 'react'
 import { HISTORY } from '../history/page';
 import { TotalUsageContext } from '@/app/(contex)/TotalUsageContext';
 import { eq } from 'drizzle-orm';
@@ -12,10 +12,15 @@ import { eq } from 'drizzle-orm';
 const UsageTrack = () => {
     const { user } = useUser();
     const { totalUsage, setTotalUsage } = useContext(TotalUsageContext);
+    const { UpdateCreditUsageContext, setUpdateCreditUsageContext } = useContext(TotalUsageContext);
 
     useEffect(() => {
         user && getData();
     }, [user])
+
+    useEffect(() => {    
+        user && getData();
+    }, [UpdateCreditUsageContext && user])
 
     const getData = async () => {
         {/* @ts-ignore */}
