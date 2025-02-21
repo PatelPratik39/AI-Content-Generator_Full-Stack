@@ -27,6 +27,9 @@ The **AI Content Generator** is a full-stack web application designed to assist 
 Below are some screenshots demonstrating the application’s features.
 
 #### **Blog Content Generator**
+![Blog Contents](./screenshots/homePage1.png)
+
+#### **Blog Content Generator**
 ![Blog Contents](./screenshots/BlogContents.png)
 
 #### **Game Character Generator**
